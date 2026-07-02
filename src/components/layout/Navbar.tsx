@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -10,10 +11,21 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-40 top-0 mix-blend-difference text-offwhite p-6">
+    <nav className="fixed top-0 z-40 w-full border-b border-offwhite/10 bg-ink/80 px-6 py-3 text-offwhite backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="text-2xl font-display font-bold tracking-tighter uppercase">
-          {brand.logoText}<span className="text-sunset">{brand.logoDot}</span>{brand.logoSuffix}
+        <a
+          href="#"
+          aria-label={`${brand.name} — home`}
+          className="relative z-50 block rounded-xl transition-transform duration-300 hover:scale-105 hover-trigger"
+        >
+          <Image
+            src="/images/kulaa-mark.png"
+            alt=""
+            width={500}
+            height={500}
+            priority
+            className="h-12 w-12 object-contain md:h-14 md:w-14"
+          />
         </a>
 
         {/* Desktop Nav */}

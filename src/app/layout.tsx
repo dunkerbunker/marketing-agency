@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Maldives Creative Agency | Brands People Actually Notice",
   description:
     "Kulaa Studio is a Maldives-based creative marketing agency building bold brands and scroll-stopping campaigns.",
+  icons: {
+    icon: [{ url: "/images/kulaa-mark.png", type: "image/png" }],
+    apple: "/images/kulaa-mark.png",
+  },
 };
 
 export default function RootLayout({

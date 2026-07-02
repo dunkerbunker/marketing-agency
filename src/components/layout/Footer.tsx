@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { brand } from '../../data/brand';
 
 export default function Footer() {
@@ -5,9 +6,19 @@ export default function Footer() {
     <footer className="bg-ink text-offwhite border-t border-offwhite/10 pt-20 pb-10 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-2">
-          <h2 className="text-4xl font-display font-black uppercase tracking-tighter mb-4">
-            {brand.logoText}<span className="text-sunset">{brand.logoDot}</span>{brand.logoSuffix}
-          </h2>
+          <a
+            href="#"
+            aria-label={`${brand.name} — home`}
+            className="mb-6 flex w-fit rounded-3xl bg-offwhite px-5 py-3 transition-transform duration-300 hover:-translate-y-1 hover-trigger"
+          >
+            <Image
+              src="/images/kulaa-logo-lockup.png"
+              alt={brand.name}
+              width={581}
+              height={718}
+              className="h-auto w-40 object-contain md:w-44"
+            />
+          </a>
           <p className="text-offwhite/60 font-medium max-w-sm">
             {brand.description}
           </p>

@@ -5,23 +5,35 @@ export interface Service {
   description: string;
 }
 
+export interface PackageAddOn {
+  title: string;
+  label: string;
+  description: string;
+  includes: string[];
+  price: string;
+  note: string;
+}
+
 export interface Package {
   title: string;
-  target: string;
+  tagline: string;
+  cadence?: string;
+  description?: string;
   includes: string[];
-  pricePrefix?: string;
-  priceUnderline?: string;
+  price?: string;
   priceSuffix?: string;
   priceFull?: string;
   priceColor: string;
   buttonText: string;
   buttonClasses: string;
   cardClasses: string;
-  wrapperClasses?: string;
   bulletColor: string;
   ribbonText: string;
   ribbonClasses: string;
   titleColor?: string;
+  note?: string;
+  addOn?: PackageAddOn;
+  featured?: boolean;
 }
 
 export interface PortfolioItemType {

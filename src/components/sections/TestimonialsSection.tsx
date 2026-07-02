@@ -3,7 +3,7 @@ import TestimonialCard from '../ui/TestimonialCard';
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-24 md:py-32 flex items-center justify-center bg-gradient-to-br from-[#2832F5] to-[#6035EE] overflow-hidden">
+    <section className="relative py-24 md:py-32 flex items-center justify-center bg-gradient-to-br from-electric to-sunset overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 relative z-10 w-full flex flex-col items-center">
         
         {/* Header Section */}

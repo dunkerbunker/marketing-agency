@@ -4,14 +4,18 @@
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
-  --color-electric: #0033FF;
-  --color-sunset: #FF3C00;
-  --color-ink: #080808;
-  --color-offwhite: #F4F4F0;
-  --color-aqua: #E0FF00;
-  --color-coral: #FF5A5F;
-  --color-cream: #EAE8E3;
-  --color-digital: #7000FF;
+  /*
+   * Kulaa ocean palette
+   * Existing semantic names are retained so component APIs stay stable.
+   */
+  --color-ink: #011F2D;
+  --color-electric: #05757D;
+  --color-sunset: #1AB7B0;
+  --color-aqua: #6FDDD2;
+  --color-cream: #B3E9E5;
+  --color-offwhite: #DAF4F3;
+  --color-coral: #6FDDD2;
+  --color-digital: #05757D;
 }
 
 body {
@@ -20,6 +24,10 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline-color: var(--color-aqua);
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {

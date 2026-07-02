@@ -8,7 +8,7 @@ export default function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-32 px-6 bg-[#0b0e14] text-offwhite relative">
+    <section id="services" className="py-32 px-6 bg-ink text-offwhite relative">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col items-start mb-20 gap-6">
           <div className="flex items-center gap-4">

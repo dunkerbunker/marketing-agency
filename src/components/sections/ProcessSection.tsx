@@ -49,7 +49,7 @@ const BowLeft = () => (
 
 export default function ProcessSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-[#0b0e14] text-offwhite relative overflow-hidden">
+    <section className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden">
       <div className="max-w-[1200px] w-full mx-auto relative z-10">
         
         {/* Header */}
@@ -112,7 +112,7 @@ export default function ProcessSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, type: 'spring' }}
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-ink border-2 border-sunset flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.3)] group"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-ink border-2 border-sunset flex items-center justify-center shadow-[0_0_30px_rgba(26,183,176,0.3)] group"
                   >
                     <span className="text-sunset font-display font-black text-lg md:text-2xl">{step.num}</span>
                   </motion.div>

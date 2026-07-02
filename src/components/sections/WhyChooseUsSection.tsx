@@ -13,7 +13,7 @@ const reasons = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-[#0b0e14] text-offwhite relative overflow-hidden flex items-center justify-center min-h-screen">
+    <section className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden flex items-center justify-center min-h-screen">
       
       {/* Background massive text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none z-0 mt-[-5%]">

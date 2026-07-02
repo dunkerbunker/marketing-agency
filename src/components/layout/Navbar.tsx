@@ -16,8 +16,17 @@ export default function Navbar() {
   useEffect(() => {
     if (!isOpen) return;
 
-    const previousOverflow = document.body.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousRootOverflow = document.documentElement.style.overflow;
+    const backgroundSections = Array.from(
+      document.querySelectorAll<HTMLElement>('main, footer')
+    );
+
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    backgroundSections.forEach((section) => {
+      section.inert = true;
+    });
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -29,7 +38,11 @@ export default function Navbar() {
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousRootOverflow;
+      backgroundSections.forEach((section) => {
+        section.inert = false;
+      });
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen]);
@@ -48,7 +61,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 z-50 w-full border-b px-6 py-3 text-offwhite transition-[background-color,border-color] duration-200 ${
         isOpen
-          ? 'border-offwhite/10 bg-[#071419]'
+          ? 'border-offwhite/10 bg-ink'
           : 'border-offwhite/10 bg-ink/80 backdrop-blur-md'
       }`}
     >
@@ -106,7 +119,7 @@ export default function Navbar() {
             animate={{ opacity: 1, transform: 'translateY(0px)' }}
             exit={animateMenu ? { opacity: 0, transform: 'translateY(-12px)' } : undefined}
             transition={{ duration: animateMenu ? 0.24 : 0, ease: [0.23, 1, 0.32, 1] }}
-            className="fixed inset-0 z-40 min-h-[100svh] overflow-y-auto bg-[#071419] px-6 pb-8 pt-28 md:hidden"
+            className="fixed inset-0 z-40 min-h-[100svh] overflow-y-auto bg-ink px-6 pb-8 pt-28 md:hidden"
           >
             <div
               className="pointer-events-none absolute -right-24 bottom-6 opacity-[0.08]"

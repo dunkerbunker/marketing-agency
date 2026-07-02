@@ -397,7 +397,7 @@ export default function HeroSection() {
         initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.2, type: 'spring' }}
         className="absolute bottom-12 z-40 pointer-events-auto"
       >
-        <a href="#packages" className="group flex items-center gap-4 px-8 py-5 bg-offwhite text-ink font-display font-black tracking-widest uppercase text-sm rounded-full hover:bg-aqua hover:text-ink transition-colors hover-trigger shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+        <a href="#packages" className="group flex items-center gap-4 px-8 py-5 bg-offwhite text-ink font-display font-black tracking-widest uppercase text-sm rounded-full hover:bg-aqua hover:text-ink transition-colors hover-trigger shadow-[0_0_40px_rgba(218,244,243,0.3)]">
           Start a Project
           <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </a>

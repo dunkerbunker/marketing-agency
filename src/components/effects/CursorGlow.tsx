@@ -60,14 +60,14 @@ export default function CursorGlow() {
         scale: isHovering ? 1.55 : 1,
         opacity: isVisible ? 1 : 0,
         backgroundColor: isHovering
-          ? 'rgba(0, 51, 255, 0.9)'
-          : 'rgba(255, 60, 0, 0.04)',
+          ? 'rgba(26, 183, 176, 0.9)'
+          : 'rgba(111, 221, 210, 0.04)',
         borderColor: isHovering
-          ? 'rgba(0, 51, 255, 1)'
-          : 'rgba(255, 60, 0, 0.8)',
+          ? 'rgba(26, 183, 176, 1)'
+          : 'rgba(111, 221, 210, 0.8)',
         boxShadow: isHovering
-          ? '0 0 0 1px rgba(0, 51, 255, 0.36), 0 0 30px rgba(0, 51, 255, 0.62)'
-          : '0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 18px rgba(255, 60, 0, 0.28)',
+          ? '0 0 0 1px rgba(26, 183, 176, 0.36), 0 0 30px rgba(26, 183, 176, 0.62)'
+          : '0 0 0 1px rgba(218, 244, 243, 0.12), 0 0 18px rgba(111, 221, 210, 0.28)',
       }}
       transition={{
         scale: prefersReducedMotion

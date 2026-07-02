@@ -63,7 +63,7 @@ export const packages: Package[] = [
     buttonText: "Choose Growth",
     buttonClasses:
       "bg-aqua text-ink hover:bg-offwhite focus-visible:bg-offwhite",
-    cardClasses: "bg-[#0b131e] text-offwhite border-2 border-aqua/40",
+    cardClasses: "bg-ink text-offwhite border-2 border-aqua/40",
     bulletColor: "bg-aqua",
     ribbonText: "Most popular",
     ribbonClasses: "bg-sunset text-ink",

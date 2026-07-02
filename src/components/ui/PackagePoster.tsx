@@ -96,7 +96,7 @@ export default function PackagePoster({ pkg, index }: PackagePosterProps) {
       </div>
 
       {pkg.addOn && (
-        <aside className="mb-8 rounded-2xl border border-ink/15 bg-white/55 p-5 md:p-6">
+        <aside className="mb-8 rounded-2xl border border-ink/15 bg-offwhite/55 p-5 md:p-6">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <h4 className="font-display text-lg font-black uppercase">
               {pkg.addOn.title}

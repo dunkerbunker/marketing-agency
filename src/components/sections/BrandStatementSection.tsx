@@ -62,7 +62,7 @@ export default function BrandStatementSection() {
             We make them <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-aqua mix-blend-normal">impossible to ignore.</span>
           </h2>
           
-          <p className="text-xl md:text-3xl font-medium leading-relaxed max-w-3xl mx-auto text-offwhite shadow-black drop-shadow-xl bg-ink/30 p-6 rounded-2xl backdrop-blur-sm border border-offwhite/10">
+          <p className="text-xl md:text-3xl font-medium leading-relaxed max-w-3xl mx-auto text-offwhite shadow-ink drop-shadow-xl bg-ink/30 p-6 rounded-2xl backdrop-blur-sm border border-offwhite/10">
             We combine strategy, visuals, content, and campaign thinking to help Maldives-based brands stand out online and in real life.
           </p>
         </motion.div>

@@ -198,24 +198,20 @@ export default function HeroSection() {
                       </text>
                     </mask>
                   </defs>
-                  <foreignObject
+                  <image
                     x="0"
                     y="0"
                     width="1160"
                     height="180"
                     mask="url(#intro-video-wordmark)"
-                  >
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      preload="auto"
-                      poster="/images/maldives-island-aerial.webp"
-                      className="w-full h-full object-cover"
-                      src="/video/maldives-drone.mp4"
-                    />
-                  </foreignObject>
+                    href={
+                      prefersReducedMotion
+                        ? '/images/maldives-island-aerial.webp'
+                        : '/video/maldives-drone-animated.webp'
+                    }
+                    preserveAspectRatio="xMidYMid slice"
+                    aria-hidden="true"
+                  />
                 </svg>
               </motion.div>
             </div>
@@ -371,25 +367,20 @@ export default function HeroSection() {
               </mask>
             </defs>
 
-            <foreignObject
+            <image
               x="0"
               y="0"
               width="1160"
               height="456"
               mask="url(#hero-video-wordmark)"
+              href={
+                prefersReducedMotion
+                  ? '/images/maldives-island-aerial.webp'
+                  : '/video/maldives-drone-animated.webp'
+              }
+              preserveAspectRatio="xMidYMid slice"
               aria-hidden="true"
-            >
-              <video
-                autoPlay={!prefersReducedMotion}
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster="/images/maldives-island-aerial.webp"
-                className="w-full h-full object-cover"
-                src="/video/maldives-drone.mp4"
-              />
-            </foreignObject>
+            />
           </svg>
         </motion.div>
         

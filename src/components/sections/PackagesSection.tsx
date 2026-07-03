@@ -5,6 +5,7 @@ export default function PackagesSection() {
   return (
     <section
       id="packages"
+      aria-labelledby="packages-title"
       className="relative overflow-hidden bg-electric px-4 py-24 md:px-8 md:py-32"
     >
       <div
@@ -19,17 +20,20 @@ export default function PackagesSection() {
       <div className="relative z-10 mx-auto w-full max-w-[1400px]">
         <header className="mb-14 max-w-4xl text-offwhite md:mb-20">
           <p className="mb-4 text-xs font-black uppercase tracking-[0.25em] text-aqua">
-            Kulaa Studio Packages
+            kulaa.studio packages
           </p>
-          <h2 className="mb-6 font-display text-5xl font-black uppercase leading-[0.92] tracking-tighter sm:text-6xl md:text-8xl">
-            Choose your
+          <h2
+            id="packages-title"
+            className="mb-6 font-display text-5xl font-black uppercase leading-[0.92] tracking-tighter sm:text-6xl md:text-8xl"
+          >
+            Marketing packages for
             <br />
-            <span className="text-aqua">growth plan.</span>
+            <span className="text-aqua">growing brands.</span>
           </h2>
           <p className="max-w-3xl text-base font-medium leading-7 text-offwhite/80 md:text-lg">
-            Whether you&apos;re just starting out or looking for a dedicated
-            creative partner, Kulaa Studio has a solution designed to help your
-            brand grow.
+            From social media marketing and monthly content to full creative
+            partnership, choose a focused plan or shape a custom package around
+            your brand, campaign and growth goals.
           </p>
         </header>
 

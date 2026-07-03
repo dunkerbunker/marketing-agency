@@ -32,9 +32,10 @@ export default function TestimonialCard({ item, index }: TestimonialCardProps) {
         <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-ink/10">
           <Image
             src={item.image}
-            alt={item.name}
+            alt={item.imageAlt}
             fill
             sizes="48px"
+            loading="lazy"
             className="object-cover"
           />
         </div>

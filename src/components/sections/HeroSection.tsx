@@ -224,7 +224,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.25 }}
                   className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-5 bg-ink"
                   role="status"
-                  aria-label="Loading Kulaa Studio"
+                  aria-label="Loading kulaa.studio"
                 >
                   <div className="font-display font-black uppercase tracking-[-0.06em] text-2xl md:text-3xl">
                     Kulaa<span className="text-sunset">.</span>Studio
@@ -244,7 +244,11 @@ export default function HeroSection() {
         )}
       </AnimatePresence>
 
-      <section ref={containerRef} className="relative min-h-[100svh] bg-ink flex items-center justify-center overflow-hidden pt-10">
+      <section
+        ref={containerRef}
+        aria-labelledby="hero-title"
+        className="relative min-h-[100svh] bg-ink flex items-center justify-center overflow-hidden pt-10"
+      >
       
       {/* Dynamic Grid Background Texture */}
       <div className="absolute inset-0 z-0 opacity-10" style={{
@@ -260,7 +264,7 @@ export default function HeroSection() {
         <motion.div
           initial={false}
           animate={{ scale: 1, opacity: 1 }}
-          className="relative z-10 w-[96vw] max-w-[96rem]"
+          className="relative z-10 w-[96vw] max-w-[96rem] md:w-[72vw] md:max-w-[72rem]"
         >
           <svg
             viewBox="0 0 1160 456"
@@ -383,10 +387,17 @@ export default function HeroSection() {
             />
           </svg>
         </motion.div>
-        
+
+        <h1
+          id="hero-title"
+          className="max-w-4xl text-balance font-display text-2xl font-black uppercase leading-tight tracking-tight text-offwhite md:text-4xl"
+        >
+          Maldives Marketing Agency for Bold Brands, Creators &amp; Campaigns
+        </h1>
+
         <motion.p 
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
-          className="text-offwhite/70 font-medium text-lg md:text-2xl max-w-2xl mt-4 md:mt-6 font-sans pointer-events-auto"
+          className="text-offwhite/70 font-medium text-base md:text-xl max-w-3xl mt-4 md:mt-6 font-sans pointer-events-auto"
         >
           {brand.description}
         </motion.p>
@@ -395,10 +406,10 @@ export default function HeroSection() {
       {/* Start Project Button Fixed to Bottom */}
       <motion.div 
         initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.2, type: 'spring' }}
-        className="absolute bottom-12 z-40 pointer-events-auto"
+        className="absolute bottom-5 z-40 pointer-events-auto"
       >
-        <a href="#packages" className="group flex items-center gap-4 px-8 py-5 bg-offwhite text-ink font-display font-black tracking-widest uppercase text-sm rounded-full hover:bg-aqua hover:text-ink transition-colors hover-trigger shadow-[0_0_40px_rgba(218,244,243,0.3)]">
-          Start a Project
+        <a href="#services" className="group flex items-center gap-4 px-8 py-5 bg-offwhite text-ink font-display font-black tracking-widest uppercase text-sm rounded-full hover:bg-aqua hover:text-ink transition-colors hover-trigger shadow-[0_0_40px_rgba(218,244,243,0.3)]">
+          Explore Our Services
           <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </a>
       </motion.div>

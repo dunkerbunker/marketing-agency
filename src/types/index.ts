@@ -2,6 +2,7 @@ export interface Service {
   id: string;
   title: string;
   img: string;
+  imgAlt: string;
   description: string;
 }
 
@@ -39,6 +40,7 @@ export interface Package {
 export interface PortfolioItemType {
   img: string;
   title: string;
+  alt: string;
   classes: string;
 }
 
@@ -47,6 +49,7 @@ export interface Testimonial {
   name: string;
   role: string;
   image: string;
+  imageAlt: string;
   stagger: string;
 }
 

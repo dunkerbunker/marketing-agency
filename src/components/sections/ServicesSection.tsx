@@ -8,7 +8,11 @@ export default function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-32 px-6 bg-ink text-offwhite relative">
+    <section
+      id="services"
+      aria-labelledby="services-title"
+      className="py-32 px-6 bg-ink text-offwhite relative"
+    >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col items-start mb-20 gap-6">
           <div className="flex items-center gap-4">
@@ -17,11 +21,15 @@ export default function ServicesSection() {
               What We Do
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl lg:text-[7rem] font-display font-black uppercase leading-[0.85] tracking-tighter max-w-5xl">
-            Full-Stack <br /> Creative Firepower
+          <h2
+            id="services-title"
+            className="text-5xl md:text-7xl lg:text-[7rem] font-display font-black uppercase leading-[0.85] tracking-tighter max-w-6xl"
+          >
+            Social, branding &amp; <br /> campaign strategy
           </h2>
-          <p className="max-w-md text-aqua font-medium text-lg md:text-xl">
-            Ten disciplines, one obsessive standard: make it move culture.
+          <p className="max-w-2xl text-aqua font-medium text-lg md:text-xl">
+            Creative direction built for island culture, modern platforms and
+            measurable momentum—from Malé launches to resort campaigns.
           </p>
         </div>
 

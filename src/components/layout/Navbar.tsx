@@ -67,8 +67,8 @@ export default function Navbar() {
     >
       <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between">
         <a
-          href="#"
-          aria-label={`${brand.name} — home`}
+          href="#top"
+          aria-label={`${brand.name} Maldives marketing agency — back to top`}
           onClick={closeMenu}
           className="block rounded-xl transition-transform duration-150 active:scale-[0.97] hover-trigger"
         >
@@ -137,7 +137,7 @@ export default function Navbar() {
             <div className="relative z-10 mx-auto flex min-h-[calc(100svh-9rem)] max-w-lg flex-col">
               <div className="mb-8 flex items-center justify-between text-[10px] font-black uppercase tracking-[0.24em] text-offwhite/45">
                 <span>Navigation</span>
-                <span>Kulaa Studio</span>
+                <span>kulaa.studio</span>
               </div>
 
               <div className="border-t border-offwhite/15">

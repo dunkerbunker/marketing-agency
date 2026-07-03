@@ -1,4 +1,4 @@
-# Kulaa Studio
+# kulaa.studio
 
 A performant Next.js website for a Maldivian creative marketing agency.
 

@@ -20,9 +20,10 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
     >
       <Image
         src={item.img}
-        alt={item.title}
+        alt={item.alt}
         fill
         sizes="(min-width: 1024px) 31vw, (min-width: 768px) 47vw, 100vw"
+        loading="lazy"
         className="object-cover filter grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

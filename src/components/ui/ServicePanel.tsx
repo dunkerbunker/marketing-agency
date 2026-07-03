@@ -26,9 +26,10 @@ export default function ServicePanel({ service, index, setHoveredIndex, isHovere
       <div className={`absolute inset-0 z-0 transition-opacity duration-500 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
         <Image
           src={service.img}
-          alt={service.title}
+          alt={service.imgAlt}
           fill
           sizes="100vw"
+          loading="lazy"
           className="object-cover opacity-30 mix-blend-luminosity"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/50 to-ink pointer-events-none" />

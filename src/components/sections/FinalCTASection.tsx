@@ -5,7 +5,11 @@ import { brand } from '../../data/brand';
 
 export default function FinalCTASection() {
   return (
-    <section id="contact" className="py-32 md:py-48 bg-ink text-offwhite relative overflow-hidden flex items-center justify-center min-h-[80vh]">
+    <section
+      id="contact"
+      aria-labelledby="contact-title"
+      className="py-32 md:py-48 bg-ink text-offwhite relative overflow-hidden flex items-center justify-center min-h-[80vh]"
+    >
       {/* Concentric Circles Background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-60">
         <div className="absolute w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-full border border-sunset/40"></div>
@@ -21,18 +25,19 @@ export default function FinalCTASection() {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-[4rem] sm:text-7xl md:text-[8rem] lg:text-[10rem] font-display font-black uppercase tracking-tighter leading-[0.85] mb-8 text-offwhite z-10 relative">
+          <h2 id="contact-title" className="text-[4rem] sm:text-7xl md:text-[8rem] lg:text-[10rem] font-display font-black uppercase tracking-tighter leading-[0.85] mb-8 text-offwhite z-10 relative">
             Your Brand <br/>
             Shouldn't <br/>
             <span className="text-transparent [-webkit-text-stroke:2px_var(--color-aqua)]">Blend</span> <span className="text-sunset">In.</span>
           </h2>
           
           <p className="text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto text-offwhite/90 z-10 relative">
-            Let's build a visual identity, content system, and campaign strategy that people remember.
+            Let&apos;s build a visual identity, social content system and
+            results-focused campaign strategy that people remember.
           </p>
 
           <a href={`mailto:${brand.email}`} className="relative z-10 inline-block px-8 py-4 rounded-[2rem] bg-gradient-to-r from-sunset to-coral text-ink font-display font-black text-sm md:text-base uppercase tracking-wider hover:opacity-90 transition-opacity duration-300">
-            Book a Free Consultation &rarr;
+            Talk to a Maldives Marketing Team &rarr;
           </a>
         </motion.div>
       </div>

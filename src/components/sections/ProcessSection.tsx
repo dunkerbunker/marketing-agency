@@ -49,7 +49,10 @@ const BowLeft = () => (
 
 export default function ProcessSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden">
+    <section
+      aria-labelledby="process-title"
+      className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden"
+    >
       <div className="max-w-[1200px] w-full mx-auto relative z-10">
         
         {/* Header */}
@@ -61,8 +64,11 @@ export default function ProcessSection() {
             </span>
             <div className="w-8 h-[2px] bg-sunset"></div>
           </div>
-          <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-display font-black uppercase tracking-tighter leading-[0.9]">
-            How We <span className="text-transparent bg-clip-text bg-gradient-to-r from-sunset to-coral">Work</span>
+          <h2
+            id="process-title"
+            className="text-5xl md:text-7xl lg:text-[6rem] font-display font-black uppercase tracking-tighter leading-[0.9]"
+          >
+            From brand strategy <br /> to <span className="text-transparent bg-clip-text bg-gradient-to-r from-sunset to-coral">campaign launch</span>
           </h2>
         </div>
 

@@ -15,7 +15,11 @@ export default function BrandStatementSection() {
   const y2 = useTransform(scrollYProgress, [0, 1], ["15%", "-15%"]);
 
   return (
-    <section ref={containerRef} className="min-h-screen relative flex items-center justify-center overflow-hidden bg-ink py-32">
+    <section
+      ref={containerRef}
+      aria-labelledby="creative-marketing-title"
+      className="min-h-screen relative flex items-center justify-center overflow-hidden bg-ink py-32"
+    >
       {/* Massive background video & image collage */}
       <div className="absolute inset-0 z-0 flex overflow-hidden">
         <video
@@ -25,6 +29,7 @@ export default function BrandStatementSection() {
           playsInline
           preload="metadata"
           poster="/images/maldives-island-aerial.webp"
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen grayscale"
           src="/video/maldives-drone.mp4"
         />
@@ -34,6 +39,7 @@ export default function BrandStatementSection() {
             alt="Maldivian fashion campaign shoot"
             fill
             sizes="50vw"
+            loading="lazy"
             className="object-cover"
           />
         </motion.div>
@@ -43,6 +49,7 @@ export default function BrandStatementSection() {
             alt="Maldivian content creator filming by a dhoni"
             fill
             sizes="50vw"
+            loading="lazy"
             className="object-cover"
           />
         </motion.div>
@@ -57,13 +64,18 @@ export default function BrandStatementSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl sm:text-7xl md:text-[8rem] font-display font-black leading-[0.85] uppercase tracking-tighter mb-12 text-offwhite mix-blend-overlay">
-            We don't make <br/> brands look <span className="text-sunset text-stroke-sunset mix-blend-normal">busy.</span> <br/>
-            We make them <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-aqua mix-blend-normal">impossible to ignore.</span>
+          <h2
+            id="creative-marketing-title"
+            className="text-5xl sm:text-7xl md:text-[8rem] font-display font-black leading-[0.85] uppercase tracking-tighter mb-12 text-offwhite mix-blend-overlay"
+          >
+            Creative marketing <br/> for Maldives brands <br/>
+            that want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-aqua mix-blend-normal">stand out.</span>
           </h2>
           
           <p className="text-xl md:text-3xl font-medium leading-relaxed max-w-3xl mx-auto text-offwhite shadow-ink drop-shadow-xl bg-ink/30 p-6 rounded-2xl backdrop-blur-sm border border-offwhite/10">
-            We combine strategy, visuals, content, and campaign thinking to help Maldives-based brands stand out online and in real life.
+            We mix brand strategy, social media, content creation and bold
+            campaign direction to help island brands grow online and in real
+            life—without sanding off what makes them interesting.
           </p>
         </motion.div>
       </div>

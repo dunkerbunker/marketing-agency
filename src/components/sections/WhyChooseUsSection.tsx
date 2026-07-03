@@ -13,13 +13,16 @@ const reasons = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden flex items-center justify-center min-h-screen">
+    <section
+      aria-labelledby="why-us-title"
+      className="py-24 md:py-32 px-6 bg-ink text-offwhite relative overflow-hidden flex items-center justify-center min-h-screen"
+    >
       
       {/* Background massive text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none z-0 mt-[-5%]">
-        <h2 className="text-[15vw] font-display font-black uppercase text-offwhite/[0.03] whitespace-nowrap">
+        <p aria-hidden="true" className="text-[15vw] font-display font-black uppercase text-offwhite/[0.03] whitespace-nowrap">
           STOP THE SCROLL
-        </h2>
+        </p>
       </div>
 
       <div className="max-w-[1200px] w-full mx-auto relative z-10 flex flex-col items-start">
@@ -32,9 +35,12 @@ export default function WhyChooseUsSection() {
               Why Us
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-display font-black uppercase tracking-tighter leading-[0.9] text-offwhite">
-            Local Instinct, <br />
-            Global Standard.
+          <h2
+            id="why-us-title"
+            className="text-5xl md:text-7xl lg:text-[6rem] font-display font-black uppercase tracking-tighter leading-[0.9] text-offwhite"
+          >
+            Why Maldives brands <br />
+            <span className="text-sunset">choose us.</span>
           </h2>
         </div>
 

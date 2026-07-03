@@ -3,7 +3,10 @@ import TestimonialCard from '../ui/TestimonialCard';
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-24 md:py-32 flex items-center justify-center bg-gradient-to-br from-electric to-sunset overflow-hidden">
+    <section
+      aria-labelledby="testimonials-title"
+      className="relative py-24 md:py-32 flex items-center justify-center bg-gradient-to-br from-electric to-sunset overflow-hidden"
+    >
       <div className="max-w-[1400px] mx-auto px-6 relative z-10 w-full flex flex-col items-center">
         
         {/* Header Section */}
@@ -14,8 +17,11 @@ export default function TestimonialsSection() {
               Word On The Island
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-black uppercase tracking-tighter text-offwhite leading-none">
-            They Got Noticed.
+          <h2
+            id="testimonials-title"
+            className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-black uppercase tracking-tighter text-offwhite leading-none"
+          >
+            Results brands talk about.
           </h2>
         </div>
 

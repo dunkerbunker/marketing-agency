@@ -3,14 +3,21 @@ import PortfolioCard from '../ui/PortfolioCard';
 
 export default function PortfolioSection() {
   return (
-    <section id="work" className="py-32 px-6 bg-offwhite text-ink relative">
+    <section
+      id="work"
+      aria-labelledby="work-title"
+      className="py-32 px-6 bg-offwhite text-ink relative"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <h2 className="text-5xl md:text-7xl font-display font-black uppercase leading-none">
-            Recent <span className="text-sunset">Hype</span>
+          <h2
+            id="work-title"
+            className="text-5xl md:text-7xl font-display font-black uppercase leading-none"
+          >
+            Campaign work built <br /> to get <span className="text-sunset">noticed</span>
           </h2>
-          <a href="#" className="font-display font-bold uppercase tracking-widest text-sm hover:text-sunset transition-colors hover-trigger pb-2 border-b-2 border-ink hover:border-sunset">
-            View Full Archive
+          <a href="#contact" className="font-display font-bold uppercase tracking-widest text-sm hover:text-sunset transition-colors hover-trigger pb-2 border-b-2 border-ink hover:border-sunset">
+            Plan your campaign
           </a>
         </div>
 

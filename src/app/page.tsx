@@ -12,8 +12,8 @@ import ServicesSection from "../components/sections/ServicesSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import WhoWeHelpSection from "../components/sections/WhoWeHelpSection";
 import WhyChooseUsSection from "../components/sections/WhyChooseUsSection";
-import { faqs } from "../data/faqs";
-import { siteConfig, siteUrl } from "../lib/site";
+import { brand, verifiedSocialProfiles } from "../data/brand";
+import { absoluteUrl, siteConfig, siteUrl } from "../lib/site";
 
 export default function Home() {
   const structuredData = {
@@ -24,34 +24,30 @@ export default function Home() {
         "@id": `${siteUrl}/#organization`,
         name: siteConfig.name,
         url: siteUrl,
-        logo: `${siteUrl}/images/kulaa-mark.png`,
+        logo: absoluteUrl("/images/kulaa-mark.png"),
+        image: absoluteUrl(siteConfig.ogImage),
         description: siteConfig.description,
-        areaServed: { "@type": "Country", name: "Maldives" },
-        // TODO: Add verified official social profile URLs to sameAs.
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": `${siteUrl}/#business`,
-        name: siteConfig.name,
-        url: siteUrl,
-        image: `${siteUrl}${siteConfig.ogImage}`,
-        description: siteConfig.description,
-        priceRange: "MVR 7,000–20,000+",
-        parentOrganization: { "@id": `${siteUrl}/#organization` },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Malé",
-          addressCountry: "MV",
-          // TODO: Add the verified street address or service-area details.
+        email: brand.email,
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: brand.email,
+          contactType: "sales",
+          areaServed: "MV",
+          availableLanguage: ["en"],
+          ...(brand.phone ? { telephone: brand.phone } : {}),
         },
-        areaServed: [
-          { "@type": "Country", name: "Maldives" },
-          { "@type": "City", name: "Malé" },
-          { "@type": "Place", name: "Maldives resorts" },
-          { "@type": "Place", name: "Maldives tourism businesses" },
-          { "@type": "Place", name: "Local lifestyle brands" },
+        areaServed: { "@type": "Country", name: "Maldives" },
+        knowsAbout: [
+          "Brand strategy",
+          "Social media marketing",
+          "Content creation",
+          "Campaign strategy",
+          "Creative direction",
+          "Website design",
         ],
-        // TODO: Add the verified phone number, email, and Google Business Profile URL.
+        ...(verifiedSocialProfiles.length
+          ? { sameAs: verifiedSocialProfiles }
+          : {}),
       },
       {
         "@type": "WebSite",
@@ -68,25 +64,13 @@ export default function Home() {
         name: "Creative and Digital Marketing Services in Maldives",
         serviceType:
           "Branding, social media marketing, content creation, campaign strategy and creative direction",
-        provider: { "@id": `${siteUrl}/#business` },
+        provider: { "@id": `${siteUrl}/#organization` },
         areaServed: { "@type": "Country", name: "Maldives" },
         audience: {
           "@type": "Audience",
           audienceType:
             "Cafés, resorts, creators, fashion brands, beauty brands, events, tourism businesses and lifestyle companies",
         },
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq-schema`,
-        mainEntity: faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
       },
     ],
   };

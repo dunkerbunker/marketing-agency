@@ -17,22 +17,12 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: siteConfig.title,
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  keywords: [
-    "Maldives marketing agency",
-    "digital marketing agency Maldives",
-    "social media marketing Maldives",
-    "creative agency Maldives",
-    "branding agency Maldives",
-    "advertising agency Maldives",
-    "content creation Maldives",
-    "resort marketing Maldives",
-    "tourism marketing Maldives",
-    "café marketing Maldives",
-    "event marketing Maldives",
-  ],
   alternates: {
     canonical: "/",
   },
@@ -46,9 +36,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1448,
-        height: 1086,
-        alt: "Maldives resort campaign created by kulaa.studio",
+        width: 1200,
+        height: 630,
+        alt: "kulaa.studio — creative marketing made in Maldives",
       },
     ],
   },
@@ -83,6 +73,9 @@ export const metadata: Metadata = {
     icon: [{ url: "/images/kulaa-mark.png", type: "image/png" }],
     apple: "/images/kulaa-mark.png",
   },
+  verification: siteConfig.googleSiteVerification
+    ? { google: siteConfig.googleSiteVerification }
+    : undefined,
 };
 
 export default function RootLayout({

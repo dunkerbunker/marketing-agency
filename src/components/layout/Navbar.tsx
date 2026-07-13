@@ -67,8 +67,8 @@ export default function Navbar() {
     >
       <div className="relative z-50 mx-auto flex max-w-7xl items-center justify-between">
         <a
-          href="#top"
-          aria-label={`${brand.name} Maldives marketing agency — back to top`}
+          href="/#top"
+          aria-label={`${brand.name} Maldives marketing agency — home`}
           onClick={closeMenu}
           className="block rounded-xl transition-transform duration-150 active:scale-[0.97] hover-trigger"
         >
@@ -78,6 +78,7 @@ export default function Navbar() {
             width={500}
             height={500}
             priority
+            sizes="56px"
             className="h-12 w-12 object-contain md:h-14 md:w-14"
           />
         </a>
@@ -89,7 +90,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="px-6 py-3 bg-offwhite text-ink hover:bg-sunset hover:text-offwhite transition-colors hover-trigger rounded-full">
+          <a href="/#contact" className="px-6 py-3 bg-offwhite text-ink hover:bg-sunset hover:text-offwhite transition-colors hover-trigger rounded-full">
             Let's Talk
           </a>
         </div>
@@ -130,6 +131,7 @@ export default function Navbar() {
                 alt=""
                 width={500}
                 height={500}
+                sizes="320px"
                 className="h-auto w-80"
               />
             </div>
@@ -163,7 +165,7 @@ export default function Navbar() {
 
               <div className="mt-auto pt-10">
                 <a
-                  href="#contact"
+                  href="/#contact"
                   onClick={closeMenu}
                   className="flex min-h-16 w-full items-center justify-between rounded-full bg-aqua px-6 font-display text-base font-black uppercase tracking-wider text-ink transition-transform duration-150 active:scale-[0.97]"
                 >

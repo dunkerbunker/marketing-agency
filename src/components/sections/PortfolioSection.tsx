@@ -16,8 +16,8 @@ export default function PortfolioSection() {
           >
             Campaign work built <br /> to get <span className="text-sunset">noticed</span>
           </h2>
-          <a href="#contact" className="font-display font-bold uppercase tracking-widest text-sm hover:text-sunset transition-colors hover-trigger pb-2 border-b-2 border-ink hover:border-sunset">
-            Plan your campaign
+          <a href="/work" className="font-display font-bold uppercase tracking-widest text-sm hover:text-sunset transition-colors hover-trigger pb-2 border-b-2 border-ink hover:border-sunset">
+            View all project stories
           </a>
         </div>
 

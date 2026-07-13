@@ -1,11 +1,13 @@
 "use client";
 
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function BrandStatementSection() {
   const containerRef = useRef<HTMLElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -13,6 +15,24 @@ export default function BrandStatementSection() {
 
   const y1 = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
   const y2 = useTransform(scrollYProgress, [0, 1], ["15%", "-15%"]);
+
+  useEffect(() => {
+    const section = containerRef.current;
+    if (!section || prefersReducedMotion) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px", threshold: 0.15 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [prefersReducedMotion]);
 
   return (
     <section
@@ -23,15 +43,15 @@ export default function BrandStatementSection() {
       {/* Massive background video & image collage */}
       <div className="absolute inset-0 z-0 flex overflow-hidden">
         <video
-          autoPlay
+          autoPlay={shouldLoadVideo}
           loop
           muted
           playsInline
-          preload="metadata"
-          poster="/images/maldives-island-aerial.webp"
+          preload="none"
+          poster={shouldLoadVideo ? "/images/maldives-island-aerial.webp" : undefined}
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen grayscale"
-          src="/video/maldives-drone.mp4"
+          src={shouldLoadVideo ? "/video/maldives-drone.mp4" : undefined}
         />
         <motion.div style={{ y: y1, scale: 1.25 }} className="relative w-1/2 h-full grayscale opacity-40 origin-top">
           <Image

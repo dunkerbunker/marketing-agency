@@ -1,7 +1,12 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { useReducedMotion } from "motion/react";
 import { brand } from "../../data/brand";
 
 export default function HeroSection() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section
       aria-labelledby="hero-title"
@@ -22,13 +27,52 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center text-center">
-        <p
-          aria-hidden="true"
-          className="max-w-full text-[clamp(2.6rem,10vw,8rem)] font-black uppercase leading-[0.78] tracking-[-0.08em] text-aqua"
-          style={{ fontFamily: "'Arial Black', Arial, sans-serif" }}
+        <svg
+          viewBox="0 0 1160 180"
+          className="block h-auto w-[96vw] max-w-[96rem] md:w-[72vw] md:max-w-[72rem]"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          aria-label={brand.name}
         >
-          {brand.name}
-        </p>
+          <defs>
+            <mask
+              id="hero-video-wordmark"
+              x="0"
+              y="0"
+              width="1160"
+              height="180"
+              maskUnits="userSpaceOnUse"
+            >
+              <rect width="1160" height="180" fill="black" />
+              <text
+                x="580"
+                y="150"
+                fill="white"
+                textAnchor="middle"
+                fontFamily="var(--font-space-grotesk), sans-serif"
+                fontSize="180"
+                fontWeight="900"
+                letterSpacing="-9"
+              >
+                {brand.name.toUpperCase()}
+              </text>
+            </mask>
+          </defs>
+          <image
+            x="0"
+            y="0"
+            width="1160"
+            height="180"
+            mask="url(#hero-video-wordmark)"
+            href={
+              prefersReducedMotion
+                ? "/images/maldives-island-aerial.webp"
+                : "/video/maldives-drone-animated.webp"
+            }
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden="true"
+          />
+        </svg>
 
         <h1
           id="hero-title"

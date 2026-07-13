@@ -1,5 +1,6 @@
 export interface Service {
   id: string;
+  slug: string;
   title: string;
   img: string;
   imgAlt: string;
@@ -38,6 +39,7 @@ export interface Package {
 }
 
 export interface PortfolioItemType {
+  slug: string;
   img: string;
   title: string;
   alt: string;

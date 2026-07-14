@@ -35,6 +35,7 @@ export interface Package {
   titleColor?: string;
   note?: string;
   addOn?: PackageAddOn;
+  optionalAddOns?: string[];
   featured?: boolean;
 }
 

@@ -7,9 +7,14 @@ import type { Package } from "../../types";
 interface PackagePosterProps {
   pkg: Package;
   index: number;
+  className?: string;
 }
 
-export default function PackagePoster({ pkg, index }: PackagePosterProps) {
+export default function PackagePoster({
+  pkg,
+  index,
+  className = "",
+}: PackagePosterProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -22,7 +27,7 @@ export default function PackagePoster({ pkg, index }: PackagePosterProps) {
         delay: prefersReducedMotion ? 0 : index * 0.06,
         ease: [0.23, 1, 0.32, 1],
       }}
-      className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] p-6 shadow-2xl md:p-9 ${pkg.cardClasses}`}
+      className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] p-6 shadow-2xl md:p-9 ${pkg.cardClasses} ${className}`}
     >
       <div
         className={`absolute right-0 top-0 rounded-bl-2xl px-5 py-3 font-display text-[10px] font-black uppercase tracking-[0.2em] md:text-xs ${pkg.ribbonClasses}`}
@@ -122,6 +127,28 @@ export default function PackagePoster({ pkg, index }: PackagePosterProps) {
           <p className="mt-1 text-xs font-semibold opacity-60">
             {pkg.addOn.note}
           </p>
+        </aside>
+      )}
+
+      {pkg.optionalAddOns && (
+        <aside className="mb-8 rounded-2xl border border-current/15 bg-current/[0.04] p-5 md:p-6">
+          <h4 className="mb-4 font-display text-lg font-black uppercase">
+            Optional add-ons
+          </h4>
+          <ul className="grid gap-3 text-sm sm:grid-cols-2">
+            {pkg.optionalAddOns.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 font-semibold leading-5"
+              >
+                <span
+                  className={`mt-2 h-1.5 w-1.5 shrink-0 rotate-45 ${pkg.bulletColor}`}
+                  aria-hidden="true"
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </aside>
       )}
 

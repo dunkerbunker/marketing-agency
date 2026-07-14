@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'motion/react';
-import { brand } from '../../data/brand';
 
 export default function FinalCTASection() {
   return (
@@ -36,8 +35,8 @@ export default function FinalCTASection() {
             results-focused campaign strategy that people remember.
           </p>
 
-          <a href={`mailto:${brand.email}`} className="relative z-10 inline-block px-8 py-4 rounded-[2rem] bg-gradient-to-r from-sunset to-coral text-ink font-display font-black text-sm md:text-base uppercase tracking-wider hover:opacity-90 transition-opacity duration-300">
-            Talk to a Maldives Marketing Team &rarr;
+          <a href="mailto:info@kulaa.studio" className="relative z-10 inline-block px-8 py-4 rounded-[2rem] bg-gradient-to-r from-sunset to-coral text-ink font-display font-black text-sm md:text-base uppercase tracking-wider hover:opacity-90 transition-[opacity,transform] duration-150 active:scale-[0.97]">
+            Talk to Kulaa Studio &rarr;
           </a>
         </motion.div>
       </div>

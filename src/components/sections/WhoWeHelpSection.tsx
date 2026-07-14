@@ -1,5 +1,4 @@
 const audiences = [
-  "Cafés",
   "Resorts",
   "Creators",
   "Fashion",
@@ -33,9 +32,9 @@ export default function WhoWeHelpSection() {
 
         <div>
           <p className="mb-10 max-w-2xl text-lg font-semibold leading-8 text-ink/75 md:text-xl">
-            We partner with local cafés in Malé, Maldives resorts, creators,
-            fashion and beauty brands, events, tourism businesses, lifestyle
-            companies and ambitious local teams ready to be seen.
+            We partner with Maldives resorts, creators, fashion and beauty
+            brands, events, tourism businesses, lifestyle companies and
+            ambitious local teams ready to be seen.
           </p>
           <ul className="flex flex-wrap gap-3" aria-label="Industries we serve">
             {audiences.map((audience) => (

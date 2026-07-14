@@ -16,6 +16,7 @@ export default function Footer() {
               alt={`${brand.name} Maldives creative marketing agency`}
               width={581}
               height={718}
+              unoptimized
               sizes="176px"
               className="h-auto w-40 object-contain md:w-44"
             />

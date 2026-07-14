@@ -39,7 +39,16 @@ export default function PackagesSection() {
 
         <div className="grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
           {packages.map((pkg, index) => (
-            <PackagePoster key={pkg.title} pkg={pkg} index={index} />
+            <PackagePoster
+              key={pkg.title}
+              pkg={pkg}
+              index={index}
+              className={
+                packages.length % 2 === 1 && index === packages.length - 1
+                  ? "lg:col-span-2"
+                  : undefined
+              }
+            />
           ))}
         </div>
       </div>

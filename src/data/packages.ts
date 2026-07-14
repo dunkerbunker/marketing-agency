@@ -2,6 +2,37 @@ import type { Package } from "../types";
 
 export const packages: Package[] = [
   {
+    title: "Launch",
+    tagline:
+      "Perfect for startups and growing businesses looking to establish a consistent online presence.",
+    cadence: "Delivered monthly",
+    includes: [
+      "3 Social Media Graphics (approx. 3/month)",
+      "2 Story Posts per Week",
+      "1 Basic Reel / Short-form Video",
+      "Basic Content Planning",
+      "Caption Writing",
+      "Monthly Content Scheduling",
+      "Basic Social Media Management",
+      "Monthly Performance Summary",
+    ],
+    optionalAddOns: [
+      "Brand Identity Package - +MVR 20,000 (one-time)",
+      "Photography Session - +MVR 2,000",
+      "Additional Social Media Graphic - MVR 350 each",
+    ],
+    price: "3,000",
+    priceSuffix: "/ month",
+    priceColor: "text-coral",
+    buttonText: "Choose Launch",
+    buttonClasses:
+      "bg-coral text-ink hover:bg-sunset focus-visible:bg-sunset",
+    cardClasses: "bg-cream text-ink border-2 border-coral",
+    bulletColor: "bg-coral",
+    ribbonText: "New package",
+    ribbonClasses: "bg-coral text-ink",
+  },
+  {
     title: "Starter",
     tagline: "Perfect for businesses starting their online presence.",
     cadence: "Delivered monthly",
